@@ -13,22 +13,28 @@ console.log(word.length);
 const fruit = "Banaan";
 const vegetable = "Aardappel";
 
-
+if (fruit.length === vegetable.length) {
+    console.log(true);
+} else {
+    console.log(false);
+}
 
 /* Opdracht 2 */
 //  Zorg ervoor dat de laatste letter van het woord in fruit en vegetable (hierboven) in de terminal gelogd wordt.
 //  Tip: bedenk 1 manier die voor beide woorden zou werken.
 // ---- Verwachte uitkomst voor fruit: "n"
 // ---- Verwachte uitkomst voor vegetable: "l"
-
-
+let food = fruit + vegetable;
+console.log(fruit[5]);
+console.log(vegetable.length - 1); // Nu nog omzetten naar string..
+console.log(food.length);
 
 /* Opdracht 3 */
 //  Haal de spaties aan het begin en eind van onderstaande zin weg en log dit in de terminal
 // ---- Verwachte uitkomst: "De kat krabt de krullen van de trap"
 
 const userInput = "  De kat krabt de krullen van de trap ";
-
+console.log(userInput.trim());
 
 
 /* Opdracht 4 */
@@ -36,14 +42,15 @@ const userInput = "  De kat krabt de krullen van de trap ";
 // ---- Verwachte uitkomst: true
 
 const story = "We vinden de behaalde resultaten werkelijk prachtig. Fantastisch, nietwaar?"
-
+console.log(story.includes("Fantastisch")); //Het werkt, maar niet goed?
 
 
 /* Opdracht 5 */
 // Knip de vraag van bovenstaande tekst (story) af, zodat alleen het eerste gedeelte overblijft en log dit in de terminal.
 // ---- Verwachte uitkomst: "We vinden de behaalde resultaten werkelijk prachtig."
-
-
+// Ik heb niet echt kunnen vinden wat het originele verhaal was, dus doen we het maar zo. We vinden de behaalde resultaten werkelijk prachtig.
+let storyTime = "Ik heb niet echt kunnen vinden wat het originele verhaal was, dus doen we het maar zo. We vinden de behaalde resultaten werkelijk prachtig.";
+console.log(storyTime.split("Ik heb niet echt kunnen vinden wat het originele verhaal was, dus doen we het maar zo.")); // matig
 
 /* Opdracht 6 */
 // Maak van onderstaand bedrag een Nederlands bedrag door het volgende te doen:
@@ -53,6 +60,10 @@ const story = "We vinden de behaalde resultaten werkelijk prachtig. Fantastisch,
 // ---- Verwachte uitkomst: "€35,59"
 
 const price = "$35.59";
+const newPrize = price.replace("$","€") + price.replace(",",".");
+console.log(price.replace("$", "€"));
+console.log(price.replace(".", ","));
+console.log(newPrize); //Nu nog dat het niet dubbel wordt geprint..
 
 
 
